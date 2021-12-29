@@ -1,0 +1,18 @@
+program prjTeste_Delphi;
+
+uses
+  Vcl.Forms,
+  untPrincipal in 'untPrincipal.pas' {frmPrincipal},
+  ClientesVO in '..\VO\ClientesVO.pas',
+  ClientesController in '..\Controller\ClientesController.pas',
+  ProdutosVO in '..\VO\ProdutosVO.pas',
+  ProdutosController in '..\Controller\ProdutosController.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.Run;
+end.

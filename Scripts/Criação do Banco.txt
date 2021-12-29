@@ -1,0 +1,84 @@
+Create database teste_delphi;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+
+use teste_delphi;
+
+Create table clientes
+(
+codigo int not null primary key auto_increment,
+nome varchar(80),
+cidade varchar(80),
+uf char(2)
+);
+
+create table produtos
+(
+codigo int not null primary key auto_increment,
+descricao varchar(100),
+valor_venda decimal
+);
+
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 01', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 02', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 03', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 04', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 05', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 06', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 07', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 08', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 09', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 10', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 11', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 12', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 13', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 14', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 15', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 16', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 17', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 18', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 19', 'FORTALEZA', 'CE');
+INSERT INTO clientes (nome, cidade, uf) VALUES ('DENNIS SOBRAL 20', 'FORTALEZA', 'CE');
+
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 01', 1.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 02', 2.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 03', 3.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 04', 4.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 05', 5.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 06', 6.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 07', 7.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 08', 8.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 09', 9.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 10', 10.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 11', 11.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 12', 12.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 13', 13.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 14', 14.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 15', 15.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 16', 16.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 17', 17.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 18', 18.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 19', 19.00);
+INSERT INTO produtos(descricao, valor_venda) VALUES ('PRODUTO 20', 20.00);
+
+
+Create table pedido_cabecalho
+(
+numero int not null primary key auto_increment,
+data_emissao datetime,
+valor_total double,
+id_cliente int, FOREIGN KEY (id_cliente) REFERENCES clientes (codigo)
+
+) ;
+
+Create table pedido_detalhe
+(
+id int not null primary key auto_increment,
+numero_pedido int not null,
+id_produto int not null,
+quantidade double,
+valor_unitario double,
+valor_total double, 
+FOREIGN KEY (numero_pedido) REFERENCES pedido_cabecalho (numero),
+FOREIGN KEY (id_produto) REFERENCES produtos (codigo)
+) ;
+

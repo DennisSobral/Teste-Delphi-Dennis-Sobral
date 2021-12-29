@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/01/23 11:55:28.000.739,=C:\Users\sobra\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/03/05 16:43:40.000.713,=C:\Users\sobra\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/06/12 09:23:46.000.892,=C:\Users\sobra\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/12/29 09:28:29.000.464,=C:\Users\sobra\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/12/29 10:44:27.000.814,C:\Users\sobra\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\untPrincipal.dfm</Transaction>
+    <Transaction>2021/12/29 10:44:27.000.814,C:\Users\sobra\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\untPrincipal.pas</Transaction>
+    <Transaction>2021/12/29 10:44:44.000.083,C:\Users\sobra\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\prjTeste_Delphi.dproj</Transaction>
+    <Transaction>2021/12/29 10:49:15.000.104,=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas</Transaction>
+    <Transaction>2021/12/29 10:51:17.000.247,C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\VO\ClientesVO.pas</Transaction>
+    <Transaction>2021/12/29 10:51:31.000.761,=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas</Transaction>
+    <Transaction>2021/12/29 10:53:50.000.931,C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Controller\ClientesController.pas</Transaction>
+    <Transaction>2021/12/29 11:47:20.992,=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas</Transaction>
+    <Transaction>2021/12/29 11:48:34.014,C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\VO\ProdutosVO.pas=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas</Transaction>
+    <Transaction>2021/12/29 11:48:41.243,=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas</Transaction>
+    <Transaction>2021/12/29 12:41:25.938,C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Controller\ProdutosController.pas=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas</Transaction>
+    <Transaction>2021/12/29 15:05:28.783,=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas</Transaction>
+    <Transaction>2021/12/29 15:11:29.728,C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\VO\PedidoCabecalhoVO.pas=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas</Transaction>
+    <Transaction>2021/12/29 15:11:37.198,=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas</Transaction>
+    <Transaction>2021/12/29 15:17:46.008,C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\VO\PedidoDetalheVO.pas=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas</Transaction>
+    <Transaction>2021/12/29 15:17:55.569,=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas</Transaction>
+    <Transaction>2021/12/29 15:18:51.945,C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Controller\PedidoController.pas=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas</Transaction>
+    <Transaction>2021/12/29 16:31:16.026,=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas</Transaction>
+    <Transaction>2021/12/29 16:32:14.338,C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\untConsultarPedido.dfm=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.dfm</Transaction>
+    <Transaction>2021/12/29 16:32:14.338,C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\untConsultarPedido.pas=C:\Users\sobra\OneDrive\Área de Trabalho\Teste Delphi Dennis Sobral\Sources\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="R9XN60CVJPP" Android64="R9XN60CVJPP"/>
+	</ActiveMobileDevice>
+</BorlandProject>

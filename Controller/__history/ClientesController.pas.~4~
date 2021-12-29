@@ -1,0 +1,37 @@
+unit ClientesController;
+
+interface
+
+uses ClientesVO, generics.collections, FireDAC.Comp.Client;
+
+Type TClientesController = class
+
+   class Function RetornarClientePorID(id: integer): TClientesVO;
+
+end;
+
+implementation
+
+{ TClientesController }
+
+class function TClientesController.RetornarClientePorID(id: integer): TClientesVO;
+Var query: TFDQuery;
+    transaction: TFDTransaction;
+begin
+
+   Try
+
+      transaction.StartTransaction;
+
+      query := TFDQuery.Create(Nil);
+      query.con
+
+   Finally
+
+      transaction.Rollback;
+
+   End;
+
+end;
+
+end.

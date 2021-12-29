@@ -1,0 +1,15 @@
+unit PedidoController;
+
+interface
+
+uses ClientesVO, generics.collections, System.SysUtils, FireDAC.Comp.Client, FireDAC.DApt;
+
+Type TPedidoController = class
+
+
+
+end;
+
+implementation
+
+end.

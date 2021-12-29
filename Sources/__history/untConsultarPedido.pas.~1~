@@ -1,0 +1,24 @@
+unit untConsultarPedido;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TfrmConsultarPedido = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmConsultarPedido: TfrmConsultarPedido;
+
+implementation
+
+{$R *.dfm}
+
+end.

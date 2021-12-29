@@ -1,0 +1,22 @@
+unit ClientesController;
+
+interface
+
+uses ClientesVO, generics.collections;
+
+Type TClientesController = class
+
+   class Function RetornarClientePorID(id: integer): TClientesVO;
+
+end;
+
+implementation
+
+{ TClientesController }
+
+class function TClientesController.RetornarClientePorID(id: integer): TClientesVO;
+begin
+
+end;
+
+end.

@@ -1,0 +1,115 @@
+unit PedidoController;
+
+interface
+
+uses PedidoCabecalhoVO, PedidoDetalheVO, generics.collections, System.SysUtils,
+     FireDAC.Comp.Client, FireDAC.DApt;
+
+Type TPedidoController = class
+
+   class Procedure GravarPedido(cabecalho: TPedidoCabecalhoVO; detalhe: TObjectList<TPedidoDetalheVO>);
+   class Function RetornarUltimoID: integer;
+
+end;
+
+implementation
+
+uses untPrincipal;
+
+{ TPedidoController }
+
+class procedure TPedidoController.GravarPedido(cabecalho: TPedidoCabecalhoVO;
+  detalhe: TObjectList<TPedidoDetalheVO>);
+Var query: TFDQuery;
+    transacao: TFDTransaction;
+  I: Integer;
+begin
+
+   Try
+
+      Try
+
+         transacao := TFDTransaction.Create(Nil);
+         transacao.StartTransaction;
+
+         query := TFDQuery.Create(Nil);
+         query.Connection := frmPrincipal.Conexao;
+
+         query.SQL.Add(' INSERT INTO pedido_cabecalho ');
+         query.SQL.Add(' (  ');
+         query.SQL.Add(' data_emissao, valor_total, id_cliente ');
+         query.SQL.Add(' )  ');
+         query.SQL.Add(' VALUES ');
+         query.SQL.Add(' (  ');
+         query.SQL.Add(' :data_emissao, :valor_total, :id_cliente ');
+         query.SQL.Add(' ) ' );
+
+         query.Params.ParamByName('data_emissao').AsDateTime := Now;
+         query.Params.ParamByName('valor_total').AsFloat     := cabecalho.valor_total;
+         query.Params.ParamByName('id_cliente').AsInteger    := cabecalho.id_cliente;
+
+         query.ExecSQL;
+         transacao.Commit;
+
+         cabecalho.numero := RetornarUltimoID;
+
+         transacao.StartTransaction;
+
+         for I := 0 to detalhe.Count - 1 do Begin
+
+            query.SQL.Add(' INSERT INTO pedido_detalhe ' );
+            query.SQL.Add(' (   ' );
+            query.SQL.Add(' numero_pedido, id_produto, quantidade, valor_unitario, valor_total ' );
+            query.SQL.Add(' )  ' );
+            query.SQL.Add(' VALUES ' );
+            query.SQL.Add(' (   ' );
+            query.SQL.Add(' numero_pedido, id_produto, quantidade, valor_unitario, valor_total ' );
+            query.SQL.Add(' ) ' );
+
+            query.Params.ParamByName('').AsDateTime := Now;
+            query.Params.ParamByName('').AsFloat    := cabecalho.valor_total;
+            query.Params.ParamByName('').AsInteger  := cabecalho.id_cliente;
+
+            query.ExecSQL;
+            transacao.Commit;
+
+
+         End;
+
+
+
+      Except
+
+         transacao.Rollback;
+
+      End;
+
+   Finally
+
+      FreeAndNil(query);
+
+   End;
+
+end;
+
+class function TPedidoController.RetornarUltimoID: integer;
+Var query: TFDQuery;
+begin
+
+   Try
+
+      query := TFDQuery.Create(Nil);
+      query.Connection := frmPrincipal.Conexao;
+
+      query.SQL.Add('SELECT COALESCE(MAX(numero),0) AS id FROM pedido_cabecalho');
+      query.Open;
+
+      Result := query.FieldByName('id').AsInteger;
+
+   Except
+
+   End;
+
+end;
+
+end.
